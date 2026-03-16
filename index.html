@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassanet Addicted - Assistance</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 50%, #2d4a3e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #c8a960;
+            margin-bottom: 8px;
+        }
+        .header .arabic { font-size: 1.8rem; color: #d4af37; }
+        .header p { color: #a0a0a0; font-size: 1.1rem; margin-top: 10px; }
+        .container {
+            max-width: 700px;
+            width: 90%;
+            padding: 20px;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(200,169,96,0.2);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .card h2 {
+            color: #c8a960;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        .card p, .card li {
+            line-height: 1.8;
+            color: #ccc;
+        }
+        .card ul { list-style: none; padding: 0; }
+        .card ul li::before { content: "✦ "; color: #d4af37; }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(200,169,96,0.3);
+            border-radius: 10px;
+            padding: 14px;
+            color: #e0e0e0;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder { color: #888; }
+        .contact-form textarea { min-height: 120px; resize: vertical; }
+        .contact-form button {
+            background: linear-gradient(135deg, #c8a960, #d4af37);
+            color: #1a1a2e;
+            border: none;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .contact-form button:hover { transform: scale(1.02); }
+        .faq h3 {
+            color: #c8a960;
+            margin: 15px 0 8px;
+            font-size: 1.05rem;
+        }
+        .faq p { margin-bottom: 10px; }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .footer a { color: #c8a960; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="arabic">حسنات</div>
+        <h1>Hassanet Addicted</h1>
+        <p>Centre d'assistance</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>A propos de l'application</h2>
+            <p>Hassanet Addicted est une application qui gamifie les bonnes actions en Islam. Gagnez des hassanat en relevant des defis quotidiens et en testant vos connaissances islamiques.</p>
+            <br>
+            <ul>
+                <li>Defis quotidiens dans 8 categories</li>
+                <li>Quiz islamique (Coran, Hadith, Fiqh, Sira)</li>
+                <li>Carte des personnes dans le besoin</li>
+                <li>Classement mondial et badges</li>
+                <li>Confession hebdomadaire</li>
+                <li>Support multilingue (العربية, Francais, English)</li>
+            </ul>
+        </div>
+
+        <div class="card faq">
+            <h2>Questions frequentes</h2>
+
+            <h3>Comment creer un compte ?</h3>
+            <p>Lancez l'application, completez l'onboarding, choisissez votre langue puis creez un compte avec votre email.</p>
+
+            <h3>Comment fonctionnent les defis ?</h3>
+            <p>Allez dans Mode Jeu > Defi. Tirez un defi aleatoire, completez-le et gagnez des hassanat. Certains defis necessitent une verification par temoins.</p>
+
+            <h3>Comment fonctionne le quiz ?</h3>
+            <p>Allez dans Mode Jeu > Quiz. Choisissez une categorie et repondez aux questions en temps limite pour gagner des points.</p>
+
+            <h3>Mes donnees sont-elles securisees ?</h3>
+            <p>Oui, toutes les communications sont chiffrees via HTTPS. Vos donnees sont stockees de maniere securisee sur nos serveurs.</p>
+
+            <h3>Comment supprimer mon compte ?</h3>
+            <p>Contactez-nous via le formulaire ci-dessous avec votre adresse email et nous supprimerons votre compte sous 48h.</p>
+        </div>
+
+        <div class="card">
+            <h2>Nous contacter</h2>
+            <form class="contact-form" action="mailto:khouloud.zineelabidine@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" placeholder="Decrivez votre probleme..." required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <p style="margin-top: 15px; text-align: center; color: #888;">
+                Ou ecrivez-nous directement a
+                <a href="mailto:khouloud.zineelabidine@gmail.com" style="color: #c8a960;">khouloud.zineelabidine@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Hassanet Addicted. Tous droits reserves.</p>
+    </div>
+</body>
+</html>

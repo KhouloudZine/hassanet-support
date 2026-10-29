@@ -49,6 +49,10 @@
             color: #ccc;
         }
         .card ul { list-style: none; padding: 0; }
+        .card ol { padding-left: 20px; color: #ccc; line-height: 1.8; }
+        .card ol li { margin-bottom: 6px; }
+        .card a { color: #d4af37; }
+        .card strong { color: #e8e8e8; }
         .card ul li::before { content: "✦ "; color: #d4af37; }
         .contact-form {
             display: flex;
@@ -80,7 +84,7 @@
             transition: transform 0.2s;
         }
         .contact-form button:hover { transform: scale(1.02); }
-        .faq h3 {
+        .card h3 {
             color: #c8a960;
             margin: 15px 0 8px;
             font-size: 1.05rem;
@@ -133,7 +137,61 @@
             <p>Oui, toutes les communications sont chiffrees via HTTPS. Vos donnees sont stockees de maniere securisee sur nos serveurs.</p>
 
             <h3>Comment supprimer mon compte ?</h3>
-            <p>Contactez-nous via le formulaire ci-dessous avec votre adresse email et nous supprimerons votre compte sous 48h.</p>
+            <p>Directement dans l'application, ou sur demande par email. Voir la section <a href="#suppression">Suppression du compte et des donnees</a>.</p>
+        </div>
+
+        <div class="card" id="suppression">
+            <h2>Suppression du compte et des donnees</h2>
+            <p>
+                Cette procedure concerne l'application <strong>Hassanet Addicted</strong>,
+                editee par <strong>MaLicorne</strong>.
+            </p>
+
+            <h3>Supprimer votre compte depuis l'application</h3>
+            <ol>
+                <li>Ouvrez <strong>Hassanet Addicted</strong> et connectez-vous.</li>
+                <li>Ouvrez le menu puis <strong>Parametres</strong>.</li>
+                <li>Section <strong>Compte</strong>, appuyez sur <strong>Supprimer le compte</strong>.</li>
+                <li>Confirmez. La suppression est <strong>immediate et definitive</strong>.</li>
+            </ol>
+
+            <h3>Supprimer votre compte par email</h3>
+            <p>
+                Si vous n'avez plus acces a l'application, ecrivez a
+                <a href="mailto:malicorne.apps@gmail.com">malicorne.apps@gmail.com</a>
+                depuis l'adresse email de votre compte, avec pour objet
+                &laquo;&nbsp;Suppression de compte&nbsp;&raquo;.
+                Votre compte est supprime <strong>sous 48 heures</strong>.
+            </p>
+
+            <h3>Donnees supprimees</h3>
+            <p>Tout est efface definitivement, sans conservation :</p>
+            <ul>
+                <li>Compte et identifiants de connexion (email, mot de passe)</li>
+                <li>Profil : pseudo, pays, genre, photo de profil, langue</li>
+                <li>Donnees de jeu : hassanat, defis, quiz, badges, serie, classement</li>
+                <li>Photos de preuve envoyees pour la validation des defis</li>
+                <li>Confessions et bilans hebdomadaires</li>
+                <li>Demandes de temoignage, emises et recues</li>
+                <li>Derniere position approximative, si vous l'aviez autorisee</li>
+            </ul>
+
+            <h3>Donnees conservees apres la suppression</h3>
+            <ul>
+                <li>
+                    <strong>Rapports de plantage</strong> (Firebase Crashlytics) : conserves
+                    jusqu'a 90 jours par Google, puis supprimes automatiquement. Ils ne
+                    contiennent aucune donnee permettant de vous identifier.
+                </li>
+                <li>
+                    <strong>Echanges par email</strong> avec le support : conserves jusqu'a
+                    12 mois a des fins de preuve, puis supprimes.
+                </li>
+            </ul>
+            <p>
+                Aucune autre donnee n'est conservee. La suppression est definitive :
+                un compte supprime ne peut pas etre restaure.
+            </p>
         </div>
 
         <div class="card">
